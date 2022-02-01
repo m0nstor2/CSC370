@@ -1,1 +1,2 @@
-# CSC370
+# HW2
+Homework2
