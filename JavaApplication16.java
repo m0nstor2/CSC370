@@ -36,7 +36,7 @@ class comparator implements Comparator<String> {
     public static void main(String[] args) {
          JavaApplication16 main = new JavaApplication16();
  String[] string1 =  {"/","/a/","/b/","/c/","/d/","/e/","/f/","/g/","/a/a/","/b/g/c/","/g/f/"};
-     main.sort(string1);     
+     main.Dirsort(string1);     
  for(int i=0; i<string1.length; i++) {
             System.out.println(string1[i]);
           }
