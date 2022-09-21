@@ -1,0 +1,30 @@
+const renderer = new THREE. WebGLRendererO:
+
+renderer, setsize (window. innerwidth, window. innerHeight);
+
+document. body.appendChild(renderer. domElement):
+
+canst camera - new THREE. Perspectivecamerac45, window. innerwidth / window. in nerileight. 1, 500);
+
+camera.position. set(o, 0, 100);
+
+camera. lookAt(0.
+
+const scene = new THREE. Scene:
+
+const material - new THREE.Linebasicaterialdi
+
+color: Off0000
+
+const points - U:
+
+points.push(re» THREE. Vector3(-10, 0, 0)); points-push (new THREE, Vector3(0, 10, 0)): points-push(new THREE, Vector3(10, 0, 0));
+
+const geometry = new THREL,tufferGeonetryO.setFromPoints (points) :
+
+Const line - new THREE ,Line (geometry, material);
+
+scene, add (line);
+
+renderer, render (scene, camera);
+
