@@ -23,7 +23,7 @@ var pts = [
   new THREE.Vector3(0, 0, 1)
 ];
 
-var faces = [ //triangle soup
+var faces = [
   pts[0].clone(), pts[2].clone(), pts[1].clone(),
   pts[0].clone(), pts[1].clone(), pts[3].clone(),
   pts[1].clone(), pts[2].clone(), pts[3].clone(),
