@@ -74,7 +74,6 @@ const geometry = new THREE.BufferGeometry().setFromPoints(points);
 const line = new THREE.Line(geometry, material);
 
 scene.add(line);
-camera.position.z = 3;
 renderer.render(scene, camera);
 
 var animation = function() {
