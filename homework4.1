@@ -1,0 +1,86 @@
+<script src="https://threejs.org/build/three.js"></script>
+
+
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
+
+const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 500);
+camera.position.set(5, 5, 5);
+camera.lookAt(0.1, 0.1, 0.1);
+const scene = new THREE.Scene();
+
+
+const material = new THREE.LineBasicMaterial({
+  //color:0x0000ff 
+});
+const points = [];
+
+points.push(new THREE.Vector3( -1,  -1, 1, ));
+points.push(new THREE.Vector3( 1 , 1, 1 ));
+points.push(new THREE.Vector3( -1, 1, 1 ));
+
+const pointss = [];
+points.push(new THREE.Vector3( -1, -1, 1 ));
+points.push(new THREE.Vector3( 1, -1, 1 ));
+points.push(new THREE.Vector3(1, 1, 1 ));
+
+
+const pointss21 = [];
+points.push(new THREE.Vector3( -1, 1, 1));
+points.push(new THREE.Vector3(-1, 1, -1 ));
+points.push(new THREE.Vector3( -1, -1, 1 ));
+
+const pointss1 = [];
+points.push(new THREE.Vector3( -1, -1, 1 ));
+points.push(new THREE.Vector3( -1, 1, 1 ));
+points.push(new THREE.Vector3(-1, -1, -1 ));
+
+const pointss211 = [];
+points.push(new THREE.Vector3( 1, -1, -1));
+points.push(new THREE.Vector3(-1, 1, -1 ));
+points.push(new THREE.Vector3( 1, 1, -1 ));
+
+const pointss121 = [];
+points.push(new THREE.Vector3( 1, -1, -1 ));
+points.push(new THREE.Vector3( -1, -1, -1 ));
+points.push(new THREE.Vector3(-1, 1, -1 ));
+
+const pointss11 = [];
+points.push(new THREE.Vector3( 1, 1, -1));
+points.push(new THREE.Vector3(1, -1, 1 ));
+points.push(new THREE.Vector3( 1, -1, -1 ));
+const pointss23 = [];
+points.push(new THREE.Vector3( 1, 1, 1 ));
+points.push(new THREE.Vector3( 1, -1, 1 ));
+points.push(new THREE.Vector3(1, 1, -1 ));
+const pointss111 = [];
+points.push(new THREE.Vector3( 1, 1, -1));
+points.push(new THREE.Vector3(-1, 1, -1 ));
+points.push(new THREE.Vector3( -1, 1, 1 ));
+const pointss213 = [];
+points.push(new THREE.Vector3( -1, 1, 1 ));
+points.push(new THREE.Vector3( 1, 1, 1 ));
+points.push(new THREE.Vector3(1, 1, -1 ));
+const pointss1111 = [];
+points.push(new THREE.Vector3( -1, -1, 1));
+points.push(new THREE.Vector3(-1, -1, -1 ));
+points.push(new THREE.Vector3( 1, -1, -1 ));
+const pointss2113 = [];
+points.push(new THREE.Vector3( 1, -1, -1 ));
+points.push(new THREE.Vector3( 1, -1, 1 ));
+points.push(new THREE.Vector3(-1, -1, 1 ));
+const geometry = new THREE.BufferGeometry().setFromPoints(points);
+const line = new THREE.Line(geometry, material);
+
+scene.add(line);
+camera.position.z = 3;
+renderer.render(scene, camera);
+
+var animation = function() {
+  requestAnimationFrame(animation);
+  renderer.render(scene, camera);
+};
+
+animation();
+
