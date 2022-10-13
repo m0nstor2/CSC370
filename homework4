@@ -83,3 +83,68 @@ var animation = function() {
 
 animation();
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Homework 1 part 2
+
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
+const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight,
+  1, 500);
+camera.position.set(5, 5, 5);
+camera.lookAt(0.1, 0.1, 0.1);
+const scene = new THREE.Scene();
+const material = new THREE.LineBasicMaterial({
+  //color:0x0000ff
+});
+
+var t1 = [-1, -1, 1]
+var t2 = [1, 1, 1]
+var t3 = [-1, 1, 1]
+var t4 = [1, -1, 1]
+var t5 = [-1, 1, -1]
+var t6 = [1, 1, -1]
+var t7 = [1, -1, -1]
+var t8 = [-1, -1, -1]
+
+const triangle11 = [
+  t1, t2, t3,
+  t1, t4, t2,
+   t3,t5,t1,
+   t1,t3,t8,
+    t7,t8,t9
+    
+]
+const line = new THREE.Line(triangle11);
+scene.add(line);
+renderer.render(scene, camera);
+
+
+
